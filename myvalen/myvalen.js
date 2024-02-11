@@ -4,7 +4,8 @@ const titleElement = document.querySelector(".title");
 const buttonsContainer = document.querySelector(".buttons");
 const yesButton = document.querySelector(".btn--yes");
 const noButton = document.querySelector(".btn--no");
-const backButton = document.querySelector(".btn--back");
+const menuButton = document.querySelector(".btn--menu");
+const messageButton = document.querySelector(".btn--message");
 const catImg = document.querySelector(".cat-img");
 
 const MAX_IMAGES = 10;
@@ -12,7 +13,8 @@ const MAX_IMAGES = 10;
 let play = true;
 let noCount = 0;
 
-backButton.classList.add("hidden");
+menuButton.classList.add("hidden");
+messageButton.classList.add("hidden");
 
 yesButton.addEventListener("click", handleYesClick);
 
@@ -30,14 +32,14 @@ noButton.addEventListener("click", function () {
 });
 
 function handleYesClick() {
-  titleElement.innerHTML = "Yayyy!! :3";
+  // titleElement.innerHTML = "Yayyy!! :3";
+  titleElement.innerHTML = "Feb 14, 2024 <br> Any time in the evening. <br> I'll pay for the food of your choice (order :>) <br> Call? So we can talk about everything :>><br><br> Message me. <br> So we can talk about it if you're free or reschedule if not :>>>>> <br><br> Click MENU for more surprise, hope you like it.";
   yesButton.classList.add("hidden");
   noButton.classList.add("hidden");
-  // Assuming you have a reference to your button element stored in a variable named backButton
-  const backButton = document.querySelector(".btn--back"); // For example
-
-  // Remove the "hidden" class from the button's class list
-  backButton.classList.remove("hidden");
+  const menuButton = document.querySelector(".btn--menu"); // For example
+  const messageButton = document.querySelector(".btn--message");
+  menuButton.classList.remove("hidden");
+  messageButton.classList.remove("hidden");
   changeImage("yes");
 }
 
